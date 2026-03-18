@@ -2,6 +2,9 @@ package ArrayPractice;
 
 import java.util.*;
 
+//adding this comment to practice git commit and push from eclipse. 
+//This is a simple Java class with various array manipulation methods that are commonly asked in coding interviews.
+//Each method is designed to solve a specific problem, and the main method demonstrates how to use them with example arrays.
 public class ArrayPractice1 {
 
 	public static void main(String[] args) {
