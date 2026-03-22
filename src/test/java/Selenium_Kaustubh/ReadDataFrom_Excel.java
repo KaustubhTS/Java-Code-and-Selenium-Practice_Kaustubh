@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class ReadDataFrom_Excel {
 
 	@Test 
-	public void readDataFromExcel  () throws IOException
+	public void readDataFromExcelOnly1Sheet  () throws IOException
 	{
 		// Read the data from the excel
         FileInputStream file = new FileInputStream(
@@ -37,7 +37,7 @@ public class ReadDataFrom_Excel {
                 if (currentRow != null && currentRow.getCell(c) != null) {
                     value = formatter.formatCellValue(currentRow.getCell(c));
                 }
-                System.out.print(value + "\t");
+                System.out.print(value + "  \t");
             }
             System.out.println();
         }
@@ -45,4 +45,57 @@ public class ReadDataFrom_Excel {
         workbook.close();
         file.close();
     }
-}
+	
+	@Test
+	public void readDataFromExcelMultipleSheets  () throws IOException
+	{
+		
+		 FileInputStream file = new FileInputStream(
+		            "C:\\RSAPIPOSTMANDOCS\\Sample WorkSheet For Ferching Data.xlsx");
+
+		        XSSFWorkbook workbook = new XSSFWorkbook(file);
+		        DataFormatter formatter = new DataFormatter();
+
+		        int totalSheets = workbook.getNumberOfSheets();
+
+		        for (int s = 0; s < totalSheets; s++) {
+
+		            XSSFSheet sheet = workbook.getSheetAt(s);
+
+		            System.out.println("\n===============================");
+		            System.out.println("Sheet: " + sheet.getSheetName());
+		            System.out.println("===============================");
+
+		            int totalRows = sheet.getLastRowNum();
+		            int totalCells = sheet.getRow(0).getLastCellNum();
+
+		            // Print Header Line
+		            for (int c = 0; c < totalCells; c++) {
+		                System.out.printf("%-20s", "Column" + (c + 1));
+		            }
+		            System.out.println();
+
+		            System.out.println("------------------------------------------------------------");
+
+		            // Print Data
+		            for (int r = 0; r <= totalRows; r++) {
+		                XSSFRow row = sheet.getRow(r);
+
+		                for (int c = 0; c < totalCells; c++) {
+		                    String value = "";
+
+		                    if (row != null && row.getCell(c) != null) {
+		                        value = formatter.formatCellValue(row.getCell(c));
+		                    }
+
+		                    System.out.printf("%-20s", value); // left aligned with fixed width
+		                }
+		                System.out.println();
+		            }
+		        }
+
+		        workbook.close();
+		        file.close();
+		    }
+	}
+	
