@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium_Kaustubh.ShadowDomHandling">
+      <class name="Selenium_Kaustubh.ReadDataFrom_Excel">
         <methods>
-          <include name="ShadowDOM"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="readDataFromSpecificRowandColumn"/>
         </methods>
-      </class> <!-- Selenium_Kaustubh.ShadowDomHandling -->
+      </class> <!-- Selenium_Kaustubh.ReadDataFrom_Excel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

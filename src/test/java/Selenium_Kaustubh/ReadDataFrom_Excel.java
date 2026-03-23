@@ -97,5 +97,35 @@ public class ReadDataFrom_Excel {
 		        workbook.close();
 		        file.close();
 		    }
+	
+	@Test
+	public void readDataFromSpecificRowandColumn  (int row , int col) throws IOException
+	{
+		// Read the data from the excel
+        FileInputStream file = new FileInputStream(
+            "C:\\RSAPIPOSTMANDOCS\\Sample WorkSheet For Ferching Data.xlsx");
+        
+        // Excel workbook
+        XSSFWorkbook workbook = new XSSFWorkbook(file);
+        XSSFSheet sheet = workbook.getSheet("Sheet1");
+        
+        int totalRows = sheet.getLastRowNum(); // 0-based
+        int totalCells = sheet.getRow(0).getLastCellNum(); // 1-based count
+        
+        System.out.println("Total Rows: " + (totalRows + 1));
+        System.out.println("Total cells: " + totalCells);
+        
+        DataFormatter formatter = new DataFormatter();
+        
+        XSSFRow currentRow = sheet.getRow(row);
+         String value = "";
+		 if (currentRow != null && currentRow.getCell(col) != null) {
+			 value = formatter.formatCellValue(currentRow.getCell(col));
+		 }
+		 System.out.println("Value at Row " + row + ", Column " + col + ": " + value);
+       
+        workbook.close();
+        file.close();
+    }
 	}
 	
