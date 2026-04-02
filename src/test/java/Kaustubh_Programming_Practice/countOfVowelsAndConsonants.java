@@ -29,6 +29,7 @@ public class countOfVowelsAndConsonants {
 		
 	}
 	
+	
 
 	public static void main(String[] args) {
 		countOfVowelAndConsonants("Kaustubh//");

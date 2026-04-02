@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Selenium_Kaustubh.ReadDataFrom_Excel">
+      <class name="Selenium_Kaustubh.WindowHandlePractice">
         <methods>
-          <include name="readDataFromSpecificRowandColumn"/>
+          <include name="WindowHandling"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- Selenium_Kaustubh.ReadDataFrom_Excel -->
+      </class> <!-- Selenium_Kaustubh.WindowHandlePractice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

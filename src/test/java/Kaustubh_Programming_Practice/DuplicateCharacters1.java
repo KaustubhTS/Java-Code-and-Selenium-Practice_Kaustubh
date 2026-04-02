@@ -49,18 +49,22 @@ public class DuplicateCharacters1 {
 	}
 
 	static void duplicateCharsStream(String s) {
-		s.chars().mapToObj(c -> (char) c).collect(Collectors.groupingBy(c -> c, Collectors.counting())).entrySet()
+		s.chars().mapToObj(c -> (char) c)
+		.collect(Collectors.groupingBy(c -> c, Collectors.counting())).entrySet()
 				.stream().filter(e -> e.getValue() > 1).forEach(e -> System.out.println(e.getKey()));
 	}
+	
+	
+	
 
 	public static void main(String[] args) {
 
-		System.out.println(duplicateChars("Kaustubhuussyyeerrtt"));
-		System.out.println("For each loop");
+		//System.out.println(duplicateChars("Kaustubhuussyyeerrtt"));
+		//System.out.println("For each loop");
 		duplicateChars1("Kaustubhuussyyeerrtt");
-		System.out.println("Stream output");
+		//System.out.println("Stream output");
 
-		duplicateCharsStream("Kaustubhuussyyeerrtt");
+		//duplicateCharsStream("Kaustubhuussyyeerrtt");
 
 	}
 
