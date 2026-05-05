@@ -39,7 +39,7 @@ public class LongestPalindromeString {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(LongestPalindrome("ababacababa"));
+		System.out.println(LongestPalindrome("ababacaba"));
 	}
 
 }

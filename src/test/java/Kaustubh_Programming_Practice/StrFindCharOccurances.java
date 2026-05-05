@@ -67,7 +67,7 @@ public class StrFindCharOccurances {
 	        }
 	}
 	
-	public void findDuplinOccurances_byHashMap()
+	public static void findDuplinOccurances_byHashMap()
 	{
 		//
 		/*1.If String is Dynamic 2.Object dealing 3.Longer Strings
@@ -85,7 +85,7 @@ public class StrFindCharOccurances {
 		for(Map.Entry<Character, Integer> key:hmap.entrySet())
 		{
 			
-			if(key.getValue()>0)
+			if(key.getValue()>1)
 			{
 				System.out.println("Char : "+key.getKey()+" || Value : "+key.getValue());
 			}
@@ -96,11 +96,11 @@ public class StrFindCharOccurances {
 		// TODO Auto-generated method stub
 		String str="java";//"Programming";
 		
-		findDuplicates_byFreqArray(str);
+		//findDuplicates_byFreqArray(str);
 		
 	//	obj.findDuplinOccurances_byArray();
 		
-		//obj.findDuplinOccurances_byHashMap();
+		findDuplinOccurances_byHashMap();
 		
 	}
 }

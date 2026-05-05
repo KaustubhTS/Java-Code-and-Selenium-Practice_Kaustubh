@@ -14,6 +14,7 @@ public class ALSorting {
 		l.add("Golu");
 		l.add("Ram");
 		l.add("Shyam");
+		l.add("kaustubh");
 		System.out.println(l);
 
 		for (int i = 0; i < l.size(); i++) {
