@@ -34,12 +34,12 @@ public class LongestSubString {
 
 		String longestSubString = null;
 		int longestSubStringLength = 0;
-		//String a = "KauKta";
+		// String a = "KauKta";
 		Map<Character, Integer> map = new LinkedHashMap<Character, Integer>();
 		char[] arr = s.toCharArray();
 
 		for (int i = 0; i < arr.length; i++) {
-			char ch = arr[i];// 
+			char ch = arr[i];//
 			if (!map.containsKey(ch)) {
 				map.put(ch, i);// (K,0),(a,1),(u,2),(s,3)
 			} else {
@@ -49,7 +49,7 @@ public class LongestSubString {
 			}
 
 			if (map.size() > longestSubStringLength) {
-				longestSubStringLength = map.size();//4
+				longestSubStringLength = map.size();// 4
 				longestSubString = map.keySet().toString();// Kaus
 			}
 		}
@@ -62,10 +62,11 @@ public class LongestSubString {
 
 	public static void main(String[] args) {
 
-		//System.out.println("Length of Longest String: " + longestSubStringUsingSet("Kaustubhyuc"));
+		// System.out.println("Length of Longest String: " +
+		// longestSubStringUsingSet("Kaustubhyuc"));
 
-		 //longestSubString("KauKta");
-		 longestSubString("Kaustubhyuc");
+		// longestSubString("KauKta");
+		longestSubString("Kaustubhyuc");
 
 	}
 

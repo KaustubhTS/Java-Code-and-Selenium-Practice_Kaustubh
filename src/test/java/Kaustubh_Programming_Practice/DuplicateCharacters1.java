@@ -40,7 +40,7 @@ public class DuplicateCharacters1 {
 
 			for (int j = i + 1; j < c1.length; j++) {
 				if (c1[i] == c1[j]) {
-					System.out.println(c1[i]);
+					System.out.print(c1[i]);
 					break;
 				}
 			}
@@ -56,16 +56,51 @@ public class DuplicateCharacters1 {
 	
 	
 	
+	
+	public static void duplicateCHAR(String str)
+	{
+		
+		char[] ch= str.toCharArray();
+		
+		
+		for(int i =0 ;i<ch.length;i++)
+		{
+			
+			boolean checked = false;
+			for(int j =0 ;j< i;j++)
+			{
+				if(ch[i]==ch[j])
+				{
+					checked=true;
+					break;
+				}
+				
+			}
+			
+			for(int k=i+1;k<ch.length;k++)
+			{
+				
+				if(ch[i]==ch[k])
+				{
+					System.out.print(ch[i]);
+					break;
+				}
+			}
+		}
+		
+		
+	}
+	
 
 	public static void main(String[] args) {
 
 		//System.out.println(duplicateChars("Kaustubhuussyyeerrtt"));
 		//System.out.println("For each loop");
-		duplicateChars1("Kaustubhuussyyeerrtt");
+		//duplicateChars1("Kaustubhuussyyeerrtt");
 		//System.out.println("Stream output");
 
 		//duplicateCharsStream("Kaustubhuussyyeerrtt");
-
+		duplicateCHAR("Kaustubh");
 	}
 
 }

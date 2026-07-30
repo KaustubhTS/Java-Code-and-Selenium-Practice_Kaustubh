@@ -29,7 +29,7 @@ public class checkArrayIsSortedOrNot {
 	}
 
 	public static void main(String[] args) {
-		int[] array = { 1, 3, 5 ,0};
+		int[] array = { 5,4,3,2,1};
 
 		sorted(array);
 

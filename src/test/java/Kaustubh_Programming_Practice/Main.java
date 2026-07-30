@@ -7,6 +7,9 @@ abstract class Base {
 }
 
 class Derived extends Base {
+	void show() {
+		System.out.println("Derieved show");
+	}
 }
 
 public class Main {

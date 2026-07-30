@@ -8,7 +8,9 @@ public class sumOfNumbersInString {
 		for (int i = 0; i < a.length; i++) {
 			if (Character.isDigit(a[i])) {
 				int k = Character.getNumericValue(a[i]);
+				System.out.println(k);
 				sum = sum + k;
+				
 			}
 
 		}

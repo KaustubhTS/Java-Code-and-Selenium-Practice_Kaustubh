@@ -30,11 +30,11 @@ public class SampleTest01 {
 
 		// Optional: Configure ChromeOptions (e.g., headless mode)
 		ChromeOptions chromeOptions = new ChromeOptions();
-		 chromeOptions.addArguments("--headless"); // Uncomment for headless execution
+		 //chromeOptions.addArguments("--headless"); // Uncomment for headless execution
 
 		// Initialize ChromeDriver
 		driver = new ChromeDriver(chromeOptions);
-		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
+		driver.get("https://www.htmlelements.com/demos/dropdownlist/multiple-selection/index.htm");
 		
 	}
 	
@@ -53,28 +53,7 @@ public class SampleTest01 {
 
 	}
 
-	@Test
-	public void scrollusingJSExecutor() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 500);");// scroll by 500 pxl
-
-		WebElement ele = driver.findElement(By.xpath("//*[@id=\"mousehover\"]"));
-		js.executeScript("arguments[0].scrollIntoView(true);", ele);
-
-		ele.click();
-
-		// js.executeScript("window.scrollTo(0, document.body.scrollHeight);");//Scroll
-		// to bottom
-	}
-
-	@Test
-	public void takeScreenshot() throws IOException  {
-		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-
-		FileHandler.copy(screenshot, new File("C:/SeleniumScreenshots/screenShot1.png"));
-
-	}
-
+	
     
 
 }

@@ -29,7 +29,7 @@ public class checkStringContainsOnlyNumbers {
 	
 	public static void main(String[] args) {
 		
-		System.out.println(onlyNumbers("K"));
+		System.out.println(onlyNumbers("1"));
 	}
 
 }

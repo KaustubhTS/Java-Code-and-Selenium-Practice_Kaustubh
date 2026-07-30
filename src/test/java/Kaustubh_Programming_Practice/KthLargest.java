@@ -28,7 +28,7 @@ public class KthLargest {
 
 	public static void main(String[] args) {
 		int[] arr = { 7, 10, 4, 3, 20, 15 };
-		int k = 4;
+		int k = 2;
 
 		System.out.println(k + "rd largest element: " + quickSelect(arr, 0, arr.length - 1, k));
 	}

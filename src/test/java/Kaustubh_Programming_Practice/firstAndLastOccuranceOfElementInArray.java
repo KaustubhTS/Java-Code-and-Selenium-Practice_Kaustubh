@@ -43,13 +43,13 @@ public class firstAndLastOccuranceOfElementInArray {
 		return new int[] { first, last };
 
 	}
-	
+
 	public static int[] findFirstAndLast(String str, char element) {
-		
-		char[] arr=str.toCharArray();
+
+		char[] arr = str.toCharArray();
 		Arrays.sort(arr);
 		System.out.println(Arrays.toString(arr));
-		
+
 		int first = -1;
 		int last = -1;
 		int low = 0;
@@ -58,8 +58,8 @@ public class firstAndLastOccuranceOfElementInArray {
 		while (low <= high) {
 			int mid = low + (high - low) / 2;
 			if (arr[mid] == element) {
-				first = mid;   // java (0,3) 3/2=1  element v
-				high = mid - 1;   // 
+				first = mid; // java (0,3) 3/2=1 element v
+				high = mid - 1; //
 			} else if (arr[mid] < element) {
 				low = mid + 1;
 
@@ -96,8 +96,8 @@ public class firstAndLastOccuranceOfElementInArray {
 //
 //		int[] output = findFirstAndLast(array, 0);
 //		System.out.println("Fist and Last Index are :" + Arrays.toString(output));
-		
-		int[] output=findFirstAndLast("Kaustubhuuuuuuuuuu",'u');
+
+		int[] output = findFirstAndLast("Kaustubhuuuuuuuuuu", 'u');
 		System.out.println("Fist and Last Index are :" + Arrays.toString(output));
 
 	}

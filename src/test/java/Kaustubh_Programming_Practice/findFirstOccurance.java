@@ -8,8 +8,8 @@ public class findFirstOccurance {
 		for (int i = 0; i < ch.length; i++) {
 			boolean repeating = false;
 
-			for (int j = i+1; j < ch.length; j++) {
-				if ( ch[i] == ch[j]) {
+			for (int j = 0; j < ch.length; j++) {
+				if ( ch[i] == ch[j] && i != j) {
 					repeating = true;
 					break;
 				}
@@ -25,7 +25,7 @@ public class findFirstOccurance {
 	}
 
 	public static void main(String[] args) {
-		firstOccurance("Kkkkkkkkkmaujkkstubhkkk kkk");
+		firstOccurance("NNi");
 
 	}
 
